@@ -1,3 +1,4 @@
+import os
 from django.contrib.auth import authenticate, login, logout
 from django.views.generic import FormView
 from django.urls import reverse_lazy
@@ -56,3 +57,11 @@ def complete_verification(request, key):
         # to do : Add Error Message
         pass
     return redirect("core:home")
+
+
+def github_login(request):
+    client_id = os.environ.get("GH_ID")
+
+
+def github_callback(request):
+    pass
