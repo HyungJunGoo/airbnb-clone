@@ -1,15 +1,30 @@
 {% extends "base.html" %}
 
 {% block page_title %}
-    User Detail
+{{user_obj.first_name}}'s Profile'
 {% endblock page_title %}
 
 {% block search-bar%}
 {% endblock search-bar%}
 
 {% block content %}
+{% if user_obj.avatar %}
+    <div style="background-image: url({{user_obj.avatar.url}});">
+{% else %}
     <div>
-        {{user_obj.first_name}}
+        <span>{{user_obj.first_name|first}}</span>
     </div>
+
+{% endif %}
+
+<div>
+    <span>{{user_obj.first_name}}</span>
+    {% if user_obj.superhost %}
+    <i>SUPERHOST</i>
+    {% endif %}
+</div>
+<span>{{user_obj.bio}}</span>
+
+<a href="#">Edit Profile</a>
 
 {% endblock content %}
