@@ -10,15 +10,20 @@
     <title>{% block page_title %}{% endblock page_title %}| Nbnb</title>
 </head>
 
-<body>
-    <header>
+<body class="text-gray-800">
+    <header class="container max-w-full flex items-center justifiy-between px-6 h-20 border-b border-gray-400">
+        <div class="flex items-center">
+            <a href="{% url "core:home"%}">
+                <img class="w-12" src="{% static 'img/logo.png' %}"/>
+            </a>
         {% include "partials/messages.html" %}
-        {% include "partials/nav.html" %}
         {% block search-bar %}
             <form method="get" action="{% url 'rooms:search' %}">
-                <input value="" name="city" placeholder="Search By City"/>
+                <input class="border px-2 py-1 rounded-sm" value="" name="city" placeholder="Search By City"/>
             </form>
         {% endblock search-bar %}
+        </div>
+        {% include "partials/nav.html" %}
     </header>
     {% block content %}{% endblock %}
     {% include "partials/footer.html" %}
