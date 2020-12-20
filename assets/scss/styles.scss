@@ -29,3 +29,19 @@ input {
         @apply outline-none border-blue-500;
     }
 }
+
+form {
+    .input {
+        @apply mb-3;
+
+        &.has_error {
+            input {
+                @apply bg-red-200 border-gray-400;
+
+                &:focus {
+                    @apply border-gray-600;
+                }
+            }
+        }
+    }
+}
