@@ -23,11 +23,11 @@ class LoginView(FormView):
         user = authenticate(self.request, username=email, password=password)
         if user is not None:
             login(self.request, user)
-        messages.success(self.request, "Welcome back")
         return super().form_valid(form)
 
 
 def log_out(request):
+    messages.info(request, "See you later")
     logout(request)
     return redirect(reverse("core:home"))
 
