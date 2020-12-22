@@ -19,10 +19,10 @@
             {% endif %}
         </div>
 
-        <span class="text-lg">{{user.bio}}</span>
+        <span class="text-lg">{{user_obj.bio}}</span>
 
         {% if user == user_obj %}
-            <a href="#" class="btn-link">Edit Profile</a>
+            <a href="{% url 'users:update' %}" class="btn-link">Edit Profile</a>
         {% endif %}
 
         {% if user_obj.rooms.count > 0 %}
