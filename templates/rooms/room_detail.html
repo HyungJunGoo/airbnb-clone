@@ -67,8 +67,8 @@
                          <span class="font-bold text-xl">{{room.reviews.count}}</span>
                          <span>review{{room.reviews.count|pluralize}}</span>
                      </div>
-                 </div>
-                 <div class="mt-10">
+                </div>
+                <div class="mt-10">
                      {% for review in room.reviews.all  %}
                         <div class="border-section">
                              <div class="mb-3 flex">
@@ -81,9 +81,15 @@
                                  </div>
                              </div>
                              <p>{{review.review}}</p>
-                    </div>
+                        </div>
                     {% endfor %}
+                </div>
             </div>
-        <div class="w-1/3"></div>
+        </div>
+        <div class="w-1/3">
+            {% if room.host == user %}
+                <a href="{% url 'rooms:edit' room.pk %}" class="btn-link block">Edit Room</a>
+            {% endif %}
+        </div>
     </div>
 {% endblock %}
