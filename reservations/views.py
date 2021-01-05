@@ -1,6 +1,6 @@
 import datetime
 from django.views.generic import View
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import redirect, reverse
 from django.contrib import messages
 from rooms import models as room_models
 from . import models
@@ -8,6 +8,7 @@ from . import models
 
 class CreateError(Exception):
     pass
+
 
 def create(request, room, year, month, day):
     try:
@@ -22,12 +23,14 @@ def create(request, room, year, month, day):
         reservation = models.Reservation.objects.create(
             guest=request.user,
             room=room,
-            check_in = date_obj,
-            check_out = date_obj + datetime.timedelta(days=1),
+            check_in=date_obj,
+            check_out=date_obj + datetime.timedelta(days=1),
         )
         return redirect(reverse("reservations:detail", kwargs={"pk": reservation.pk}))
 
 
 class ReservationDetailView(View):
-    def get(self):
-        pass
+    def get(self, pk):
+        reservation = models.Reservation.objects.get_or_none(pk=pk)
+        if not reservation:
+            return redirect(reverse("core:home"))
