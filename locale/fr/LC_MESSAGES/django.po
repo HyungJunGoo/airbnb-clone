@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-06 22:21+0900\n"
+"POT-Creation-Date: 2021-01-07 15:37+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,10 +22,168 @@ msgstr ""
 msgid "Search By City"
 msgstr "Recherche par ville"
 
-#: templates/partials/footer.html:4
+#: templates/partials/footer.html:5
 msgid "Please don't copy us"
 msgstr "Veuillez ne pas nous copier"
 
-#: templates/partials/footer.html:6
+#: templates/partials/footer.html:7
 msgid "All rights reserved"
 msgstr "Tous les droits sont réservés"
+
+#: templates/partials/nav.html:7
+msgid "Stop hosting"
+msgstr "Arrêter l'hébergement"
+
+#: templates/partials/nav.html:9
+msgid "Start hosting"
+msgstr "Commencer l'hébergement"
+
+#: templates/partials/nav.html:14
+msgid "Create Room"
+msgstr "Créer une chambre"
+
+#: templates/partials/nav.html:16
+msgid "Profile"
+msgstr "Profil"
+
+#: templates/partials/nav.html:17
+msgid "Log out"
+msgstr "Déconnexion"
+
+#: templates/partials/nav.html:19
+msgid "Login"
+msgstr "Le login"
+
+#: templates/partials/nav.html:20
+msgid "SignUp"
+msgstr "S'inscrire"
+
+#: templates/partials/social_login.html:4
+msgid "Continue with Github"
+msgstr "Continuer avec Github"
+
+#: templates/partials/social_login.html:7
+msgid "Continue with Kakao"
+msgstr "Continuer avec Kakao"
+
+#: templates/reservations/detail.html:32
+msgid "Contact your Airbnb Host"
+msgstr "Contactez votre hôte Airbnb"
+
+#: templates/reservations/detail.html:33
+msgid "Send a Message"
+msgstr "Envoyer un message"
+
+#: templates/reservations/detail.html:40
+msgid "Write your review"
+msgstr "Donnez votre avis"
+
+#: templates/reservations/detail.html:44
+msgid "Submit Review"
+msgstr "Poster le commentaire"
+
+#: templates/reservations/detail.html:49
+msgid "Confirm Reservation"
+msgstr "Confirmer la réservation"
+
+#: templates/reservations/detail.html:51
+msgid "Cancel Reservation"
+msgstr "Annuler une réservation"
+
+#: templates/rooms/room_detail.html:42
+msgid "Amenities"
+msgstr "Agréments"
+
+#: templates/rooms/room_detail.html:48
+msgid "Facilities"
+msgstr "Installations"
+
+#: templates/rooms/room_detail.html:54
+msgid "House Rules"
+msgstr "Règles de la maison"
+
+#: templates/rooms/room_detail.html:60
+msgid "Reviews"
+msgstr "Commentaires"
+
+#: templates/rooms/room_detail.html:92
+msgid "Edit Room"
+msgstr "Créer une chambre"
+
+#: templates/rooms/room_list.html:27
+#, python-format
+msgid "Page%(current_page)s of %(total_page)s"
+msgstr "Page %(current_page)s de %(total_page)s"
+
+#: templates/rooms/room_photos.html:5
+msgid "'s Photos"
+msgstr "Photos de"
+
+#: templates/rooms/room_photos.html:14
+msgid "Upload Photo"
+msgstr "Envoyer la photo"
+
+#: templates/rooms/room_photos.html:23
+msgid "Edit"
+msgstr "Éditer"
+
+#: templates/rooms/room_photos.html:24
+msgid "Delete"
+msgstr ""
+
+#: templates/rooms/room_photos.html:29
+msgid "Back to edit room"
+msgstr "Retour à la salle de montage"
+
+#: templates/rooms/search.html:4 templates/rooms/search.html:11
+#: templates/rooms/search.html:15
+msgid "Search"
+msgstr "Recherche par ville"
+
+#: templates/rooms/search.html:18
+msgid "Results"
+msgstr "Résultats"
+
+#: templates/rooms/search.html:26
+msgid "Previous"
+msgstr "Précédente"
+
+#: templates/rooms/search.html:32
+msgid "Next"
+msgstr "Prochaine/Prochain"
+
+#: users/mixins.py:25
+msgid "Can't go there"
+msgstr "Je ne peux pas y aller"
+
+#: users/models.py:20
+msgid "Male"
+msgstr "Mâle"
+
+#: users/models.py:21
+msgid "Female"
+msgstr "Femelle"
+
+#: users/models.py:22
+msgid "Other"
+msgstr "Autre"
+
+#: users/models.py:27
+msgid "English"
+msgstr "l' anglais"
+
+#: users/models.py:27
+msgid "Korean"
+msgstr "le Coréen"
+
+#: users/models.py:44
+msgid "gender"
+msgstr "le sexe"
+
+#: users/models.py:49
+msgid "bio"
+msgstr "Biographie"
+
+#: users/models.py:52
+msgid "language"
+msgstr "Langue"

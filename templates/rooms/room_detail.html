@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load is_booked %}
+{% load is_booked i18n %}
 
 {% block page_title %}
     {{room.name}}
@@ -39,25 +39,25 @@
                 {{room.description}}
             </p>
             <div class="border-section">
-                <h4 class="font-medium text-lg mb-5">Amenities</h4>
+                <h4 class="font-medium text-lg mb-5">{% trans "Amenities" %}</h4>
                 {% for a in room.amenities.all %}
                     <li class="mb-2">{{a}}</li>
                 {% endfor %}
             </div>
             <div class="border-section">
-                <h4 class="font-medium text-lg mb-5">Facilities</h4>
+                <h4 class="font-medium text-lg mb-5">{% trans "Facilities" %}</h4>
                 {% for a in room.facilities.all %}
                     <li class="mb-2">{{a}}</li>
                 {% endfor %}
             </div>
             <div class="border-section">
-                <h4 class="font-medium text-lg mb-5">House Rules</h4>
+                <h4 class="font-medium text-lg mb-5">{% trans "House Rules" %}</h4>
                 {% for a in room.house_rules.all %}
                     <li class="mb-2">{{a}}</li>
                 {% endfor %}
             </div>
             <div class="mt-10">
-                <h4 class="font-medium text-2xl mb-5">Reviews</h4>
+                <h4 class="font-medium text-2xl mb-5">{% trans "Reviews" %}</h4>
                 <div class="flex items-center">
                      <div>
                          <i class="fas fa-star text-green-500"></i>
@@ -89,7 +89,7 @@
         </div>
         <div class="w-1/3">
             {% if room.host == user %}
-                <a href="{% url 'rooms:edit' room.pk %}" class="btn-link block">Edit Room</a>
+                <a href="{% url 'rooms:edit' room.pk %}" class="btn-link block">{% trans "Edit Room" %}</a>
             {% else %}
                 {% if not request.session.is_hosting %}
                     {% for calendar in room.get_calendars %}

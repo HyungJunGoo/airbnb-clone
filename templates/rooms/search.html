@@ -1,22 +1,21 @@
 {% extends 'base.html' %}
-
+{% load i18n %}
 {% block page_title %}
-Search
-{% endblock page_title %}
+{% trans "Search" %}
 
 {% block search-bar %}
 {% endblock search-bar %}
 
 {% block content %}
 
-<h2>Search</h2>
+<h2>{% trans "Search" %}</h2>
 
 <form method="get" action="{% url 'rooms:search' %}">
     {{form.as_p}}
-    <button>Search</button>
+    <button>{% trans "Search" %}</button>
 </form>
 
-<h3>Results</h3>
+<h3>{% trans "Results" %}</h3>
 
 {% for room in rooms %}
     <h3>{{room.name}}</h3>
@@ -24,13 +23,13 @@ Search
 
 <h5>
     {% if page > 0 %}
-        <a href="?page={{page |add:-1}}">Previous</a>
+        <a href="?page={{page |add:-1}}">{% trans "Previous" %}</a>
     {% endif %}
 
     Page {{page}} of {{num_page}}
 
     {% if page < num_page %}
-        <a href="?page={{page |add:1}}">Next</a>
+        <a href="?page={{page |add:1}}">{% trans "Next" %}</a>
     {% endif %}
 </h5>
 
