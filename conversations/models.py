@@ -31,7 +31,7 @@ class Message(core_models.TimeStampedModel):
         "users.User", related_name="messages", on_delete=models.CASCADE
     )
     conversations = models.ForeignKey(
-        "conversations.Conversation", related_name="messages", on_delete=models.CASCADE
+        "Conversation", related_name="messages", on_delete=models.CASCADE
     )
 
     def __str__(self):
