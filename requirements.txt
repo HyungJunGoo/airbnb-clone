@@ -14,7 +14,7 @@ click==7.1.2
 colorama==0.4.3
 cryptography==3.3.1
 distlib==0.3.1
-Django==2.2.5
+Django==2.1.1
 django-countries==7.0
 django-dotenv==1.4.2
 django-seed==0.2.2

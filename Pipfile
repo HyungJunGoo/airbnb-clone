@@ -9,7 +9,7 @@ black = "*"
 awsebcli = "*"
 
 [packages]
-django = "==2.2.5"
+django = "==2.1.1"
 pillow = "*"
 django-countries = "*"
 django-seed = "*"
