@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pathspec = "*"
+pathspec = "==0.5.9"
 django = "*"
 django-dotenv = "*"
 django-countries = "*"
