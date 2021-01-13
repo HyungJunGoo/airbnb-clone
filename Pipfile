@@ -1,24 +1,20 @@
 [[source]]
-name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
+name = "pypi"
+
+[packages]
+pathspec = "*"
+django = "*"
+django-dotenv = "*"
+django-countries = "*"
+django-seed = "*"
+requests = "*"
+pillow = "*"
 
 [dev-packages]
 flake8 = "*"
-black = "*"
 awsebcli = "*"
 
-[packages]
-django = "==2.1.1"
-pillow = "*"
-django-countries = "*"
-django-seed = "*"
-django-dotenv = "*"
-requests = "*"
-pipenv-to-requirements = "*"
-
 [requires]
-python_version = "3.7"
-
-[pipenv]
-allow_prereleases = true
+python_version = "3.9"
