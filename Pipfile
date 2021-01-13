@@ -11,6 +11,7 @@ django-countries = "*"
 django-seed = "*"
 requests = "*"
 pillow = "*"
+pipenv-to-requirements = "*"
 
 [dev-packages]
 flake8 = "*"
