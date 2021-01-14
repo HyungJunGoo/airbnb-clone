@@ -10,6 +10,7 @@ requests = "*"
 django-countries = "*"
 django-seed = "*"
 django-dotenv = "*"
+gunicorn = "*"
 
 [dev-packages]
 awsebcli = "*"
