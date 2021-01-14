@@ -4,18 +4,15 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pathspec = "==0.5.9"
-django = "*"
-django-dotenv = "*"
+django = "==2.2.5"
+pillow = "*"
+requests = "*"
 django-countries = "*"
 django-seed = "*"
-requests = "*"
-pillow = "*"
-pipenv-to-requirements = "*"
+django-dotenv = "*"
 
 [dev-packages]
-flake8 = "*"
 awsebcli = "*"
 
 [requires]
-python_version = "3.9"
+python_version = "3.8"
