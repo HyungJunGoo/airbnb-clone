@@ -11,6 +11,7 @@ django-countries = "*"
 django-seed = "*"
 django-dotenv = "*"
 gunicorn = "*"
+pipenv-to-requirements = "*"
 
 [dev-packages]
 awsebcli = "*"
