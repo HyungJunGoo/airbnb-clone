@@ -12,6 +12,7 @@ django-seed = "*"
 django-dotenv = "*"
 gunicorn = "*"
 pipenv-to-requirements = "*"
+sentry-sdk = "*"
 
 [dev-packages]
 awsebcli = "*"
